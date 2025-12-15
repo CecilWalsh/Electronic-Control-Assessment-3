@@ -7,11 +7,11 @@
  * http://opensource.org/licenses/MIT
  */
 
-#include <devguid.h>
-#include <initguid.h>
+#include <windows.h>
 #include <setupapi.h>
 #include <tchar.h>
-#include <windows.h>
+#include <initguid.h>
+#include <devguid.h>
 
 #include <cstring>
 
