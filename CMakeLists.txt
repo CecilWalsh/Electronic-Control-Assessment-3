@@ -11,7 +11,9 @@ if (POLICY CMP0141)
 endif()
 
 add_subdirectory("serial")
-add_subdirectory("opencv")
+# find_package(OpenCV REQUIRED)
+
+# include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(SRCFILES
     "SerialExample.cpp" 
@@ -23,4 +25,5 @@ set(SRCFILES
 # 将源代码添加到此项目的可执行文件。
 add_executable (SerialExample ${SRCFILES})
 
-target_link_libraries(SerialExample PRIVATE serial opencv)
+# target_link_libraries(SerialExample PRIVATE serial ${OpenCV_LIBS})
+target_link_libraries(SerialExample PRIVATE serial)
